@@ -1,14 +1,14 @@
 package com.webflux.api.mapper;
 
-import com.webflux.api.model.Car;
+import com.webflux.api.model.Version;
 import org.springframework.data.r2dbc.repository.Query;
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Mono;
 
 @Repository
-public interface CarRepository extends R2dbcRepository<Car, String> {
+public interface VersionRepository extends R2dbcRepository<Version, String> {
 
-    @Query("select * from tb_car where car_number = :car_number")
-    Mono<Car> findOneCar(String car_number);
+    @Query("select * from tb_version")
+    Mono<Version> versionSelect();
 }

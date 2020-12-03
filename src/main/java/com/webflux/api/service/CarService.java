@@ -31,8 +31,8 @@ public class CarService {
 
     public Mono<Car> oneCar(Car car) {
 
-        String carNumberId = car.getCar_number_id();
+        String car_number = car.getCar_number();
 
-        return carRepository.findOneCar(carNumberId);
+        return carRepository.findOneCar(car_number);
     }
 }

@@ -25,5 +25,4 @@ public class CarHandler {
         return ok().contentType(MediaType.APPLICATION_JSON)
                 .body(carRepository.findAll(), List.class);
     }
-
 }

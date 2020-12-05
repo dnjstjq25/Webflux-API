@@ -12,7 +12,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 @Configuration
 public class CarRoute {
 
-    CarRepository carRepository;
+    CarRepository carRepository; //레포지토리 선언
     CarHandler carHandler = new CarHandler(carRepository);
 
     public RouterFunction<ServerResponse> carRouter = route()

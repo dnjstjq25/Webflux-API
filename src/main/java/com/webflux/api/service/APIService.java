@@ -36,4 +36,9 @@ public class APIService {
         return memberRepository.save(member); //insert, update를 처리(기본키가 있을 때)
     }
 
+    public Mono<Void> delete(Member member) {
+
+        return memberRepository.delete(member);
+    }
+
 }

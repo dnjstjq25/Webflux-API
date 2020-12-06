@@ -30,15 +30,15 @@ public class APIController {
         return apiService.login(member);
     }
 
-    @PostMapping("/register")
+    @PostMapping("/memberRegister")
     public Mono<Member> register(@RequestBody Member member) throws Exception {
 
         return apiService.register(member);
     }
 
-    @PostMapping("/modify")
-    public Mono<Member> modify(@RequestBody Member member) throws Exception {
+    @PostMapping("/memberDelete")
+    public Mono<Void> delete(@RequestBody Member member) throws Exception {
 
-        return apiService.modify(member);
+        return apiService.delete(member);
     }
 }

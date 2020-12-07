@@ -1,6 +1,6 @@
-package com.webflux.api;
+package com.webflux.api.car;
 
-import com.webflux.api.mapper.CarRepository;
+import com.webflux.api.car.CarRepository;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;

@@ -1,4 +1,4 @@
-package com.webflux.api.model;
+package com.webflux.api.car;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

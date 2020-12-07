@@ -1,6 +1,5 @@
-package com.webflux.api.mapper;
+package com.webflux.api.version;
 
-import com.webflux.api.model.Version;
 import org.springframework.data.r2dbc.repository.Query;
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
 import org.springframework.stereotype.Repository;

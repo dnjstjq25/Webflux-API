@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Map;
+
 @RestController
 public class APIController {
     //사용할 서비스 선언
@@ -19,7 +21,7 @@ public class APIController {
 
     //버전체크
     @GetMapping("/version")
-    public Mono<Version> version() throws Exception {
+    public Mono<Map<String, Object>> version() throws Exception {
 
         return apiService.versionSelect();
     }

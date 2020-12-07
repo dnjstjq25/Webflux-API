@@ -7,11 +7,18 @@ import com.webflux.api.model.Car;
 import com.webflux.api.model.Member;
 import com.webflux.api.model.Version;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.function.ServerResponse;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.util.function.Tuples;
 
-import java.util.List;
+import javax.servlet.http.HttpServlet;
+import java.util.*;
+
+import static org.springframework.web.servlet.function.ServerResponse.ok;
+
 
 @Slf4j
 @Service
@@ -32,6 +39,7 @@ public class APIService {
 
         return versionRepository.versionSelect();
     }
+
     //로그인
     public Mono<Member> login(Member member) {
 
@@ -63,5 +71,16 @@ public class APIService {
 
         return carRepository.findOneCar(car_number);
     }
+
+    /*private Mono<Map<String, Object>> result(Integer response, String msg, Flux<?> data) {
+
+        Map<String, Object> result = new HashMap<>();
+
+        result.put("code", response);
+        result.put("msg", msg);
+        result.put("data", data.collectList());
+
+        return Mono.just(result);
+    }*/
 
 }

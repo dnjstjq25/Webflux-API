@@ -21,7 +21,7 @@ public class APIController {
 
     //버전체크
     @GetMapping("/version")
-    public Mono<Map<String, Object>> version() throws Exception {
+    public Mono<Version> version() throws Exception {
 
         return apiService.versionSelect();
     }
